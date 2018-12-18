@@ -1,8 +1,13 @@
 <template>
   <div id="mtLoadMore">
     <!-- 父组件高度必须固定，且overflow-y:scroll -->
+<<<<<<< HEAD
     <div class="page-loadmore-wrapper" ref="wrapper">
       <mt-loadmore
+=======
+    <div class="page-loadmore-wrapper" ref="wrapper" :style="{height:`${wrapperHeight}px`}">
+      <load-more
+>>>>>>> 4057819eba9bbe24efa32b53d9f2dd4d83e75a59
        ref="loadmore"
        :wrapperHeight="wrapperHeight"
       :top-method="topMethod"
@@ -20,7 +25,7 @@
             </div>
           </div>
         </div>
-      </mt-loadmore>
+      </load-more>
       <p v-if="bottomAllLoaded">已经到底部</p>
     </div>
   </div>

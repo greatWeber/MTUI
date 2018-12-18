@@ -8,11 +8,11 @@
 
 	function refreshRem() {
     var width = docEl.getBoundingClientRect().width;
-    console.log(1233,width)
 		maxWidth = maxWidth || 540;
 		width>maxWidth && (width=maxWidth);
-		var rem = width * 100 / designWidth;
-		remStyle.innerHTML = 'html{font-size:' + rem + 'px;}';
+    var rem = width * 100 / designWidth;
+    remStyle.innerHTML = 'html{font-size:' + rem + 'px;}';
+    console.log('rem',rem,width)
 	}
 
 	if (docEl.firstElementChild) {
