@@ -2,22 +2,21 @@
   <div class="mtui-stepper">
     <div
       :class="`mtui-stepper_reduce ${currentValue <= min ? 'disable' : ''} ${ disable ? 'disable' : ''}`"
-      @click.stop.prevent="reduce"
+      @click="reduce"
     ></div>
     <input
       type="tel"
       :value="currentValue"
-      @blur.stop.prevent="handleValue"
-      @focus.stop.prevent="focusFn"
+      @blur="handleValue"
+      @focus="focusFn"
       :maxlength="maxLength"
       :class="`mtui-stepper_input ${disableInput ? 'disable' : ''}`"
       :readonly="disableInput"
       ref="inputBox"
-      @click.stop.prevent=""
     >
     <div
       :class="`mtui-stepper_add ${currentValue >= max ? 'disable' : ''} ${disable ? 'disable' : ''}`"
-      @click.stop.prevent="add"
+      @click="add"
     ></div>
   </div>
 </template>
